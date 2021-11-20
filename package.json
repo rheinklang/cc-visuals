@@ -1,0 +1,27 @@
+{
+  "name": "@rheinklang/cc-visuals",
+  "version": "1.0.0",
+  "description": "Creative Coding for Visuals",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheinklang/cc-visuals.git"
+  },
+  "keywords": [
+    "rheinklang",
+    "creative-coding",
+    "visuals"
+  ],
+  "author": "Society Rheinklang",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rheinklang/cc-visuals/issues"
+  },
+  "homepage": "https://github.com/rheinklang/cc-visuals#readme",
+  "dependencies": {
+    "canvas-sketch": "0.7.4"
+  }
+}

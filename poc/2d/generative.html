@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      canvas {
+        border: 2px dashed black;
+        margin: 20px auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="1200" height="800"></canvas>
+    <div id="info"></div>
+    <script>
+      const info = document.getElementById("info");
+      const canvas = document.querySelector("canvas");
+      const context = canvas.getContext("2d");
+
+      for (let row = 0; row < 5; row++) {
+        let width = 210;
+        let height = 210;
+        let gap = 20;
+        let x = row * (width + gap) + gap;
+
+        for (let col = 0; col < 3; col++) {
+          let y = col * (height + gap) + gap;
+
+          context.strokeStyle = "black";
+          context.lineWidth = 5;
+          context.beginPath();
+          context.rect(x, y, width, height);
+          context.stroke();
+          context.closePath();
+
+          if (row % 2 === 0 && col % 2 === 0) {
+            context.strokeStyle = "cyan";
+            context.lineWidth = 6;
+            context.beginPath();
+            context.rect(x + 20, y + 20, width - 40, height - 40);
+            context.stroke();
+            context.closePath();
+          }
+
+          if (row === 2) {
+            context.strokeStyle = "magenta";
+            context.lineWidth = 6;
+            context.beginPath();
+            context.rect(x + 20, y + 20, width - 40, height - 40);
+            context.stroke();
+            context.closePath();
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
